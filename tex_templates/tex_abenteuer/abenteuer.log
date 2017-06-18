@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2016.12.14)  18 JUN 2017 11:47
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2016.12.14)  18 JUN 2017 12:48
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -613,19 +613,20 @@ LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `bold'
 ) (./abenteuer.aux)
 \openout1 = `abenteuer.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 94.
-LaTeX Font Info:    ... okay on input line 94.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 94.
-LaTeX Font Info:    ... okay on input line 94.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 94.
-LaTeX Font Info:    ... okay on input line 94.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 94.
-LaTeX Font Info:    ... okay on input line 94.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 94.
-LaTeX Font Info:    ... okay on input line 94.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 94.
-LaTeX Font Info:    ... okay on input line 94.
-LaTeX Font Info:    Try loading font information for OT1+lmr on input line 94.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 107.
+LaTeX Font Info:    ... okay on input line 107.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 107.
+LaTeX Font Info:    ... okay on input line 107.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 107.
+LaTeX Font Info:    ... okay on input line 107.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 107.
+LaTeX Font Info:    ... okay on input line 107.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 107.
+LaTeX Font Info:    ... okay on input line 107.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 107.
+LaTeX Font Info:    ... okay on input line 107.
+LaTeX Font Info:    Try loading font information for OT1+lmr on input line 107.
+
 
 (/usr/share/texmf/tex/latex/lm/ot1lmr.fd
 File: ot1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
@@ -725,15 +726,15 @@ e
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
 ABD: EveryShipout initializing macros
-LaTeX Font Info:    Try loading font information for OT1+lmss on input line 95.
-
+LaTeX Font Info:    Try loading font information for OT1+lmss on input line 108
+.
  (/usr/share/texmf/tex/latex/lm/ot1lmss.fd
 File: ot1lmss.fd 2009/10/30 v1.6 Font defs for Latin Modern
 ) <bilder/hintergrund.jpg, id=4, 1064.97874pt x 820.06375pt>
 File: bilder/hintergrund.jpg Graphic file (type jpg)
 
 <use bilder/hintergrund.jpg>
-Package pdftex.def Info: bilder/hintergrund.jpg used on input line 98.
+Package pdftex.def Info: bilder/hintergrund.jpg used on input line 111.
 (pdftex.def)             Requested size: 1097.49289pt x 845.04684pt.
 
 <bilder/Splittermond_Fanpaket/Coverbalken.png, id=5, 597.432pt x 845.0772pt>
@@ -741,7 +742,7 @@ File: bilder/Splittermond_Fanpaket/Coverbalken.png Graphic file (type png)
 
 <use bilder/Splittermond_Fanpaket/Coverbalken.png>
 Package pdftex.def Info: bilder/Splittermond_Fanpaket/Coverbalken.png used on i
-nput line 100.
+nput line 113.
 (pdftex.def)             Requested size: 597.55817pt x 845.04933pt.
 
 <bilder/Splittermond-Logo_fan_v2.png, id=7, 565.11125pt x 200.75pt>
@@ -749,7 +750,7 @@ File: bilder/Splittermond-Logo_fan_v2.png Graphic file (type png)
 
 <use bilder/Splittermond-Logo_fan_v2.png>
 Package pdftex.def Info: bilder/Splittermond-Logo_fan_v2.png used on input line
- 113.
+ 126.
 (pdftex.def)             Requested size: 452.08961pt x 160.6002pt.
 
 <bilder/Splittermond_Fanpaket/Hintergrund_links.png, id=8, 326.9013pt x 462.528
@@ -758,7 +759,7 @@ File: bilder/Splittermond_Fanpaket/Hintergrund_links.png Graphic file (type png
 )
  <use bilder/Splittermond_Fanpaket/Hintergrund_links.png>
 Package pdftex.def Info: bilder/Splittermond_Fanpaket/Hintergrund_links.png use
-d on input line 115.
+d on input line 128.
 (pdftex.def)             Requested size: 597.50787pt x 845.46515pt.
  [1
 
@@ -770,41 +771,41 @@ File: bilder/Splittermond-Logo_fan_v2.png Graphic file (type png)
 
 <use bilder/Splittermond-Logo_fan_v2.png>
 Package pdftex.def Info: bilder/Splittermond-Logo_fan_v2.png used on input line
- 130.
+ 143.
 (pdftex.def)             Requested size: 452.08961pt x 160.6002pt.
 LaTeX Font Info:    Font shape `OT1/lmss/m/it' in size <12> not available
-(Font)              Font shape `OT1/lmss/m/sl' tried instead on input line 137.
+(Font)              Font shape `OT1/lmss/m/sl' tried instead on input line 150.
 
-LaTeX Font Info:    Try loading font information for OML+lmm on input line 151.
+LaTeX Font Info:    Try loading font information for OML+lmm on input line 164.
 
 
 (/usr/share/texmf/tex/latex/lm/omllmm.fd
 File: omllmm.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
-LaTeX Font Info:    Try loading font information for OMS+lmsy on input line 151
+LaTeX Font Info:    Try loading font information for OMS+lmsy on input line 164
 .
 
 (/usr/share/texmf/tex/latex/lm/omslmsy.fd
 File: omslmsy.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
-LaTeX Font Info:    Try loading font information for OMX+lmex on input line 151
+LaTeX Font Info:    Try loading font information for OMX+lmex on input line 164
 .
 
 (/usr/share/texmf/tex/latex/lm/omxlmex.fd
 File: omxlmex.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <12> on input line 151.
+(Font)              <12> on input line 164.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <8> on input line 151.
+(Font)              <8> on input line 164.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <6> on input line 151.
+(Font)              <6> on input line 164.
 
 (/usr/share/texlive/texmf-dist/tex/latex/ucs/data/uni-0.def
 File: uni-0.def 2013/05/13 UCS: Unicode data U+0000..U+00FF
 )
 LaTeX Font Info:    Font shape `OT1/lmss/m/it' in size <6> not available
-(Font)              Font shape `OT1/lmss/m/sl' tried instead on input line 158.
+(Font)              Font shape `OT1/lmss/m/sl' tried instead on input line 171.
 
 
 <bilder/Splittermond_Fanpaket/CC-BY.png, id=18, 97.0827pt x 33.9669pt>
@@ -812,7 +813,7 @@ File: bilder/Splittermond_Fanpaket/CC-BY.png Graphic file (type png)
 
 <use bilder/Splittermond_Fanpaket/CC-BY.png>
 Package pdftex.def Info: bilder/Splittermond_Fanpaket/CC-BY.png used on input l
-ine 159.
+ine 172.
 (pdftex.def)             Requested size: 97.08244pt x 33.96681pt.
 
 <bilder/Splittermond_Fanpaket/Hintergrund_rechts.png, id=19, 326.9013pt x 462.5
@@ -821,7 +822,7 @@ File: bilder/Splittermond_Fanpaket/Hintergrund_rechts.png Graphic file (type pn
 g)
  <use bilder/Splittermond_Fanpaket/Hintergrund_rechts.png>
 Package pdftex.def Info: bilder/Splittermond_Fanpaket/Hintergrund_rechts.png us
-ed on input line 165.
+ed on input line 178.
 (pdftex.def)             Requested size: 597.50787pt x 845.46515pt.
  [2
 
@@ -835,12 +836,12 @@ File: bilder/Splittermond_Fanpaket/Hintergrund_links.png Graphic file (type png
 
 <use bilder/Splittermond_Fanpaket/Hintergrund_links.png>
 Package pdftex.def Info: bilder/Splittermond_Fanpaket/Hintergrund_links.png use
-d on input line 167.
+d on input line 180.
 (pdftex.def)             Requested size: 597.50787pt x 845.46515pt.
  [3
 
 ]
-Underfull \hbox (badness 10000) in paragraph at lines 179--184
+Underfull \hbox (badness 10000) in paragraph at lines 192--197
 
  []
 
@@ -850,10 +851,10 @@ File: bilder/Splittermond_Fanpaket/Kasten_kurz.png Graphic file (type png)
 
 <use bilder/Splittermond_Fanpaket/Kasten_kurz.png>
 Package pdftex.def Info: bilder/Splittermond_Fanpaket/Kasten_kurz.png used on i
-nput line 184.
+nput line 197.
 (pdftex.def)             Requested size: 236.17053pt x 129.48099pt.
 
-Overfull \hbox (5.0pt too wide) in paragraph at lines 184--184
+Overfull \hbox (5.0pt too wide) in paragraph at lines 197--197
 [][] 
  []
 
@@ -861,7 +862,7 @@ File: bilder/Splittermond_Fanpaket/Hintergrund_rechts.png Graphic file (type pn
 g)
 <use bilder/Splittermond_Fanpaket/Hintergrund_rechts.png>
 Package pdftex.def Info: bilder/Splittermond_Fanpaket/Hintergrund_rechts.png us
-ed on input line 195.
+ed on input line 208.
 (pdftex.def)             Requested size: 597.50787pt x 845.46515pt.
 
 
@@ -873,28 +874,28 @@ Package Fancyhdr Warning: \footskip is too small (0.0pt):
 [4
 
  <./bilder/Splittermond_Fanpaket/Kasten_kurz.png>]
-LaTeX Font Info:    Try loading font information for OMS+lmss on input line 197
+LaTeX Font Info:    Try loading font information for OMS+lmss on input line 210
 .
-LaTeX Font Info:    No file OMSlmss.fd. on input line 197.
+LaTeX Font Info:    No file OMSlmss.fd. on input line 210.
 
 
 LaTeX Font Warning: Font shape `OMS/lmss/m/n' undefined
 (Font)              using `OMS/cmsy/m/n' instead
-(Font)              for symbol `textbullet' on input line 197.
+(Font)              for symbol `textbullet' on input line 210.
 
 <bilder/foo.png, id=39, 642.4pt x 481.8pt>
 File: bilder/foo.png Graphic file (type png)
  <use bilder/foo.png>
-Package pdftex.def Info: bilder/foo.png used on input line 208.
+Package pdftex.def Info: bilder/foo.png used on input line 221.
 (pdftex.def)             Requested size: 239.00316pt x 179.24832pt.
 
-Overfull \hbox (5.0pt too wide) in paragraph at lines 208--209
+Overfull \hbox (5.0pt too wide) in paragraph at lines 221--222
  [] 
  []
 
 File: bilder/foo.png Graphic file (type png)
 <use bilder/foo.png>
-Package pdftex.def Info: bilder/foo.png used on input line 214.
+Package pdftex.def Info: bilder/foo.png used on input line 227.
 (pdftex.def)             Requested size: 286.8067pt x 215.10976pt.
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
@@ -904,25 +905,25 @@ File: bilder/Splittermond_Fanpaket/Hintergrund_links.png Graphic file (type png
 
 <use bilder/Splittermond_Fanpaket/Hintergrund_links.png>
 Package pdftex.def Info: bilder/Splittermond_Fanpaket/Hintergrund_links.png use
-d on input line 217.
+d on input line 230.
 (pdftex.def)             Requested size: 597.50787pt x 845.46515pt.
  [5 <./bilder/foo.png>]
-Overfull \hbox (5.0pt too wide) in paragraph at lines 225--254
+Overfull \hbox (5.0pt too wide) in paragraph at lines 238--267
 [] 
  []
 
 
-Overfull \hbox (5.0029pt too wide) in paragraph at lines 225--254
+Overfull \hbox (5.0029pt too wide) in paragraph at lines 238--267
 [] 
  []
 
 
-Overfull \hbox (5.00098pt too wide) in paragraph at lines 225--254
+Overfull \hbox (5.00098pt too wide) in paragraph at lines 238--267
 [] 
  []
 
 
-Overfull \hbox (5.0pt too wide) in paragraph at lines 225--254
+Overfull \hbox (5.0pt too wide) in paragraph at lines 238--267
 [] 
  []
 
@@ -930,7 +931,7 @@ File: bilder/Splittermond_Fanpaket/Hintergrund_rechts.png Graphic file (type pn
 g)
 <use bilder/Splittermond_Fanpaket/Hintergrund_rechts.png>
 Package pdftex.def Info: bilder/Splittermond_Fanpaket/Hintergrund_rechts.png us
-ed on input line 256.
+ed on input line 269.
 (pdftex.def)             Requested size: 597.50787pt x 845.46515pt.
  [6] (./abenteuer.aux)
 
