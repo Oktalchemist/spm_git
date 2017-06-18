@@ -1,7 +1,7 @@
 % Erstellt von Benjamin Thomitzni
 % Version 1.0, 18.06.17
 % 
-% Für die Erstellung des Dokuments wurde eine Reihe an LaTeX Paketen verwendet. Diese sind unter der LPPL (http://www.latex-project.org/lppl.txt) Lizenz zu finden. 
+% Für die Erstellung des Dokuments wurde eine Reihe an LaTeX Paketen verwendet. Diese sind unter der LPPL (http://www.latex-project.org/lppl.txt) Lizenz veröffentlich, falls nicht anders genannt.
 %
 %Ein Teil der Graphiken sind dem Splittermond Fanpaket von Meisterperson/Daniel Bruxmeier (https://meisterperson.wordpress.com/2015/02/24/splittermond-fanpaket/) entnommen. 
 % Sie basieren auf Grafiken von Brenda Clarke (http://inadesign-stock.deviantart.com/art/Moody-Blues-Texture-Pack-1-261617011), Bethany Lerie (http://redlillith.deviantart.com/art/misc-tribal-brushes-14070868), Alex Ruiz (http://alexruizart.deviantart.com/art/Tribal-Tech-Photoshop-Brushes-414404973) & Carsten Jünger (http://pixelmixtur-stocks.deviantart.com/art/Wood-Texture-418149743)
@@ -9,16 +9,16 @@
 %
 %Das Splittermond Rollenspiel wird vom Uhrwerk-Verlag (http://www.uhrwerk-verlag.de/) vertrieben.
 %
-%
+%Der Code compiliert mit pdflatex (https://www.ctan.org/pkg/pdftex)
 
 \documentclass[12pt, a4paper, twoside, openany]{book}
 
-\usepackage[utf8x]{inputenc}
-\usepackage{german} %Deutsche Sprache
-\usepackage[]{graphicx} %Zusatzfunktionen für Graphiken, remove draft for release
-\usepackage{blindtext} %für lorem ipsum blindtext
-\usepackage{multicol} %für zweispaltig etc.
-\usepackage[a4paper]{geometry} %Abstände innerhalb der Seiten
+\usepackage[utf8x]{inputenc} %https://www.ctan.org/pkg/inputenc
+\usepackage{german} %Deutsche Sprache, https://www.ctan.org/pkg/german
+\usepackage[]{graphicx} %Zusatzfunktionen für Graphiken, remove draft for release, https://www.ctan.org/pkg/graphicx
+\usepackage{blindtext} %für lorem ipsum blindtext, https://www.ctan.org/pkg/blindtext
+\usepackage{multicol} %für zweispaltig etc., https://www.ctan.org/pkg/multicol?lang=en
+\usepackage[a4paper]{geometry} %Abstände innerhalb der Seiten, https://www.ctan.org/pkg/geometry
 \geometry{
         a4paper,
         top=32mm,
@@ -26,9 +26,9 @@
         inner=29mm,
         footskip=0mm
 }
-\usepackage{float} %Float Optionen für Graphiken
+\usepackage{float} %Float Optionen für Graphiken, https://www.ctan.org/pkg/float
 %Header ------
-\usepackage{fancyhdr} %Paket zum Einstellen des Headers
+\usepackage{fancyhdr} %Paket zum Einstellen des Headers, https://www.ctan.org/pkg/fancyhdr
 \fancyhead{}
 \fancyfoot{}
 \fancyfoot[C]{\color{black} \Large  \textbf{\thepage}} %Fußnote, left even, right odd auf alternierenden Seiten Seitenzahl wechseln
@@ -36,8 +36,8 @@
 \renewcommand{\headrulewidth}{0pt} % Ausschalten der Headerlinie
 \renewcommand{\footrulewidth}{0pt}
 %----- Farben
-\usepackage{anyfontsize} %Größere/Kleinere Zeichen
-\usepackage[table]{xcolor} %Farben definierne können, table für rowcolor
+\usepackage{anyfontsize} %Größere/Kleinere Zeichen, https://www.ctan.org/pkg/anyfontsize
+\usepackage[table]{xcolor} %Farben definierne können, table für rowcolor, https://www.ctan.org/pkg/xcolor
 \definecolor{spmblue}{HTML}{25408F}%Überrschriftenfarbe
 \definecolor{kastenblau}{HTML}{BADDF3}
 \definecolor{kastenumrandung}{HTML}{5E9BD0}
@@ -45,7 +45,7 @@
 \definecolor{spmtabelle}{HTML}{ABE1FA}
 \pagecolor{spmback}
 %---- Veränderungen an den Überschriften
-\usepackage{sectsty} %Kontrollieren von Chapter, Section Positon
+\usepackage{sectsty} %Kontrollieren von Chapter, Section Positon, https://www.ctan.org/pkg/sectsty
 
 \allsectionsfont{\sffamily \centering} %Alle Überschriften zentrieren
 \chapterfont{\sffamily \centering \color{spmblue}}
@@ -53,14 +53,14 @@
 \subsubsectionfont{\sffamily \color{black}}
 
 %---- Geometry paket um die margins einzustellen
-\usepackage{authoraftertitle}%title, author und date einstellen und immer abrufen können
+\usepackage{authoraftertitle}%title, author und date einstellen und immer abrufen können, https://www.ctan.org/pkg/authoraftertitle, Public Domain Software Lizenz
 
 %--- boxes
-\usepackage{tcolorbox} %Farbige Box
-\usepackage{tikz} %Tikz, um zu zeichnen
+\usepackage{tcolorbox} %Farbige Box, https://www.ctan.org/pkg/tcolorbox
+\usepackage{tikz} %Tikz, um zu zeichnen, https://www.ctan.org/pkg/pgf?lang=en, GNU Lizenz
 \tcbuselibrary{skins}
 %---- bessere auzählung
-\usepackage{enumitem}
+\usepackage{enumitem} %https://www.ctan.org/pkg/enumitem
 \setlist{nosep} %oder \setlist{noitemsep}
 
 %---- Metadaten
@@ -69,7 +69,7 @@
 \date{datum}
 %----------------------
 %Hintergrundeinstellungen
-\usepackage{background}%Hintergründe ienstellen
+\usepackage{background}%Hintergründe einstellen, https://www.ctan.org/pkg/background
 \backgroundsetup{
         scale=1,
         opacity=0.6,
@@ -83,10 +83,10 @@
                     }
                }
 %------------
-\usepackage{lmodern}%Schrift
+               \usepackage{lmodern}%Schrift, https://www.ctan.org/tex-archive/info/lmodern
 
 %------ Margin für Chapter etc. oben verkleinern
-\usepackage{etoolbox}
+               \usepackage{etoolbox} % https://www.ctan.org/pkg/etoolbox
 \makeatletter
 \patchcmd{\@makechapterhead}{50\p@}{0pt}{}{}
 \patchcmd{\@makeschapterhead}{50\p@}{0pt}{}{}
@@ -161,7 +161,7 @@
 
         \subsection*{Layout}
         \begin{center}
-                Basierend auf der Fanwerk Layoutvorlage von Daniel Bruxmeier,\\ nachempfunden in \LaTeX ~und compiliert mit \textit{pdflatex} von Benjamin Thomitzni. \\
+                Angelehnt an das Fanwerk Layoutvorlage von Daniel Bruxmeier unter Verwendung von Graphiken aus seinem Splittermond Fanpaket,\\ erstellt in \LaTeX ~und compiliert mit \textit{pdflatex} von Benjamin Thomitzni. \\
         Basierend auf Graphiken von \\ 
         Brenda Clarke, Buthany Lerie, Alex Ruiz und Carsten Jünger         
         \end{center}
