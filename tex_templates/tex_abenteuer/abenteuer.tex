@@ -3,10 +3,6 @@
 % 
 % Für die Erstellung des Dokuments wurde eine Reihe an LaTeX Paketen verwendet. Diese sind unter der LPPL (http://www.latex-project.org/lppl.txt) Lizenz veröffentlich, falls nicht anders genannt.
 %
-%Ein Teil der Graphiken sind dem Splittermond Fanpaket von Meisterperson/Daniel Bruxmeier (https://meisterperson.wordpress.com/2015/02/24/splittermond-fanpaket/) entnommen. 
-% Sie basieren auf Grafiken von Brenda Clarke (http://inadesign-stock.deviantart.com/art/Moody-Blues-Texture-Pack-1-261617011), Bethany Lerie (http://redlillith.deviantart.com/art/misc-tribal-brushes-14070868), Alex Ruiz (http://alexruizart.deviantart.com/art/Tribal-Tech-Photoshop-Brushes-414404973) & Carsten Jünger (http://pixelmixtur-stocks.deviantart.com/art/Wood-Texture-418149743)
-% Das Fanlayout von Daniel Bruxmeier ist unter der CC-by 4.0 (http://creativecommons.org/licenses/by/4.0/deed.de) veröffentlicht worden. Texte und zusätzliche Illustrationen sind hiervon ausgenommen. 
-%
 %Das Splittermond Rollenspiel wird vom Uhrwerk-Verlag (http://www.uhrwerk-verlag.de/) vertrieben.
 %
 %Der Code compiliert mit pdflatex (https://www.ctan.org/pkg/pdftex)
@@ -21,17 +17,18 @@
 \usepackage[a4paper]{geometry} %Abstände innerhalb der Seiten, https://www.ctan.org/pkg/geometry
 \geometry{
         a4paper,
-        top=32mm,
+        top=20mm,
         outer=13mm, 
-        inner=29mm,
-        footskip=0mm
+        inner=32mm,
+        footskip=15mm
 }
 \usepackage{float} %Float Optionen für Graphiken, https://www.ctan.org/pkg/float
 %Header ------
 \usepackage{fancyhdr} %Paket zum Einstellen des Headers, https://www.ctan.org/pkg/fancyhdr
 \fancyhead{}
 \fancyfoot{}
-\fancyfoot[C]{\color{black} \Large  \textbf{\thepage}} %Fußnote, left even, right odd auf alternierenden Seiten Seitenzahl wechseln
+\fancyfoot[LO, RE]{\color{white} \Huge  \textbf{\thepage}} %Fußnote, left even, right odd auf alternierenden Seiten Seitenzahl wechseln
+\fancyfootoffset[LO, RE]{50pt}
 \pagestyle{fancy}
 \renewcommand{\headrulewidth}{0pt} % Ausschalten der Headerlinie
 \renewcommand{\footrulewidth}{0pt}
@@ -72,13 +69,13 @@
 \usepackage{background}%Hintergründe einstellen, https://www.ctan.org/pkg/background
 \backgroundsetup{
         scale=1,
-        opacity=0.6,
+        opacity=1,
         angle=0,
         contents={%Um gerade, ungerade zahl zu wechseln
                  \ifodd\value{page}
-                         \includegraphics[width=\paperwidth]{bilder/Splittermond_Fanpaket/Hintergrund_links.png}
+                         \includegraphics[width=\paperwidth]{bilder/seite-links.png}
                  \else
-                        \includegraphics[width=\paperwidth]{bilder/Splittermond_Fanpaket/Hintergrund_rechts.png}
+                        \includegraphics[width=\paperwidth]{bilder/seite-rechts.png}
                  \fi
                     }
                }
@@ -94,13 +91,13 @@
 \patchcmd{\chapter}{\thispagestyle{plain}}{\thispagestyle{fancy}}{}{}
 %----- Defintion der Splittermond Box
 \newtcolorbox{spmbox}[2][]{
-            boxsep=5mm, 
+            boxsep=8mm, 
             width=0.5\textwidth, 
             top=1mm, 
             bottom=1mm, 
             enhanced, 
             frame hidden, 
-            interior style image=bilder/Splittermond_Fanpaket/Kasten_kurz.png
+            interior style image=bilder/Kasten.png
 }
 
 
@@ -110,7 +107,7 @@
     %Hintergrundbild für das Titelblatt
         \tikz[remember picture,overlay] \node[opacity=1,inner sep=0pt] at (current page.center){\includegraphics[height=\paperheight]{bilder/hintergrund.jpg}};
         %Balken auf der Seite des Titelblattes
-        \tikz[remember picture,overlay] \node[opacity=1,inner sep=0pt] at (current page.center){\includegraphics[width=\paperwidth,height=\paperheight]{bilder/Splittermond_Fanpaket/Coverbalken.png}};
+        \tikz[remember picture,overlay] \node[opacity=1,inner sep=0pt] at (current page.center){\includegraphics[width=\paperwidth,height=\paperheight]{bilder/titelbild-balken.png}};
 
         {
             \begin{center}
@@ -161,28 +158,28 @@
 
         \subsection*{Layout}
         \begin{center}
-                Angelehnt an das Fanwerk Layoutvorlage von Daniel Bruxmeier unter Verwendung von Graphiken aus seinem Splittermond Fanpaket,\\ erstellt in \LaTeX ~und compiliert mit \textit{pdflatex} von Benjamin Thomitzni. \\
-        Basierend auf Graphiken von \\ 
-        Brenda Clarke, Buthany Lerie, Alex Ruiz und Carsten Jünger         
+               Erstellt von Benjamin Thomitzni mit \LaTeX~und compiliert mit \textit{pdflatex}.\\
+               Inspririert von der Fanwerk Layoutvorlage von Daniel Bruxmeier für Word. \\         
         \end{center}
-        \subsection*{Lizenz}
-        \begin{center}
-                \tiny
-                Dieses Layout steht unter der \textit{Creative-Commens}-Lizenz. \\
-                \includegraphics[scale=1]{bilder/Splittermond_Fanpaket/CC-BY.png}\\
-                Dies umfasst ausdrücklich nicht die eigentlichen Inhalte des Dokuments wie Texte oder zusätzliche Illustrationen. \\
-                Bei Nutzung diess Layout bitte wenn möglich das endgültige Werk ebenfalls unter einer \textit{Creatives-Commens}-Lizenz stellen. 
-        \end{center}
+        %\subsection*{Lizenz}%Alte Lizenz als noch Graphiken von Daniel Bruxmeier verwendet wurden.
+        %\begin{center}
+        %        \tiny
+        %        Dieses Layout steht unter der \textit{Creative-Commens}-Lizenz. \\
+        %        \includegraphics[scale=1]{bilder/Splittermond_Fanpaket/CC-BY.png}\\
+        %        Dies umfasst ausdrücklich nicht die eigentlichen Inhalte des Dokuments wie Texte oder zusätzliche Illustrationen. \\
+        %        Bei Nutzung diess Layout bitte wenn möglich das endgültige Werk ebenfalls unter einer \textit{Creatives-Commens}-Lizenz stellen. 
+        %\end{center}
 }
-%---------- Inhaltsverzeichnis
-        \tableofcontents
+%---------- Inhaltsverzeichnis % entfernen um einzufügen
+%        \tableofcontents
 %----------
-\chapter*{\MyTitle}
-        \addcontentsline{toc}{chapter}{\MyTitle}
+\chapter*{\MyTitle}%Chapter*, Section* etc. bedeutet dass sie nicht zur Inhaltsangabe hinzugefügt werden. Deswegen die nächste Zeile
+\addcontentsline{toc}{chapter}{\MyTitle}
 
 \begin{multicols}{2}
         \subsubsection*{von \MyAuthor}
         Blindtext blabla
+%----------------------Box Code        
         \begin{spmbox}
                 {\begin{center}
                     \color{spmblue}
@@ -195,6 +192,7 @@
                 \textbf{Erfahrung:} Heldengrad X\\
                 \textbf{Zeitraum:} 2-999 Tage\\
         \end{spmbox}
+%---------------------Kleine Überschriften
         \subsection*{Hintergrund}
             \Blindtext[1][1]
         \subsection*{Handlung}
@@ -202,27 +200,30 @@
         \subsection*{Auswahl der Abenteuerer}
             Irgendwelche Idioten die sterben wollen.             
 \end{multicols}
+%-------------------- Neuer Abschnitt
 \section*{Einstieg: Wer, Wie, Wo, Was, Wie, Hä?}
 \addcontentsline{toc}{section}{Einstieg: Wer, Wie, Wo, Was, Wie, Hä?}
-\begin{multicols}{2}
+
+\begin{multicols}{2} %Begin zweizweilises Layout
         \Blindtext[1][1]
+%--------------------Auflistung        
         \begin{enumerate}[label=\textbullet]
                 \item Ein Item der Liste
                 \item Ein Zweites Item auf der Liste
-
         \end{enumerate}
 
 \subsection*{Nummer Eins}
 \Blindtext[1][1]
 \subsubsection*{Unterüberschrift}
 \Blindtext[1][1]
-{
-\begin{center}
-\includegraphics[width=0.5\textwidth]{bilder/foo.png}
-\end{center}
-}
+        {%---- Bild einfügen direkt im Text, da float umgebungen in multicol Probleme machen. 
+        \begin{center}
+        \includegraphics[width=0.5\textwidth]{bilder/foo.png}
+        \end{center}
+        }
 \end{multicols}
-\begin{figure}[H]
+%--------- Bild einfügen außerhalb des textes
+\begin{figure}[H] %H bedeutet "Hier" platzieren
         \centering
         \includegraphics[width=.6\textwidth]{bilder/foo.png}
         \label{fig:piel}
@@ -230,14 +231,14 @@
 
 \begin{multicols}{2}
         \Blindtext[1][1]
-        
+%---------------- Gegner Block bis unten
        \vbox{%Gegner Block
                 {
                 \vspace{5mm}
                 \Large
                 \textbf{Beispielgegner}
                 }\\
-                \rule{0.5\textwidth}{0.2em}\\
+                \rule{0.5\textwidth}{0.2em}\\%Querstrich
                 \resizebox{0.5\textwidth}{!}{%Automatisches Skalieren der Tabelle
                 \begin{tabular}{c|c|c|c|c|c|c|c}
                         \rowcolor{spmtabelle}
@@ -255,7 +256,7 @@
 
         \end{tabular}
         }%Resizebox
-        \vspace{2mm}\\
+        \vspace{2mm}\\%Abstand
         \textbf{Typus:} Humanoid \\
         \textbf{Monstergrad:} 0/0 \\
         \textbf{Fertigkeiten:} Absolut Nix 1, Nix 2 \\
@@ -264,7 +265,9 @@
         \textbf{Beute:} Lollipop \\
         \rule{0.5\textwidth}{0.2em}\\
         \vspace{5mm}
-        }%Gegner Block Ende
+        }
+%------------------ Gegner Block Ende
 \end{multicols}    
+
 \end{document}
 
