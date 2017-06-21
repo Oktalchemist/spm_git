@@ -17,21 +17,23 @@
 \usepackage[a4paper]{geometry} %Abstände innerhalb der Seiten, https://www.ctan.org/pkg/geometry
 \geometry{
         a4paper,
-        top=20mm,
-        outer=13mm, 
-        inner=32mm,
-        footskip=15mm
+        top=30mm,
+        inner=13mm, 
+        outer=32mm,
+        footskip=10mm
 }
 \usepackage{float} %Float Optionen für Graphiken, https://www.ctan.org/pkg/float
 %Header ------
 \usepackage{fancyhdr} %Paket zum Einstellen des Headers, https://www.ctan.org/pkg/fancyhdr
-\fancyhead{}
-\fancyfoot{}
-\fancyfoot[LO, RE]{\color{white} \Huge  \textbf{\thepage}} %Fußnote, left even, right odd auf alternierenden Seiten Seitenzahl wechseln
-\fancyfootoffset[LO, RE]{50pt}
-\pagestyle{fancy}
-\renewcommand{\headrulewidth}{0pt} % Ausschalten der Headerlinie
-\renewcommand{\footrulewidth}{0pt}
+\fancypagestyle{plain}{
+        \fancyhead{}
+        \fancyfoot{}
+        \fancyfoot[RO, LE]{\color{white} \Huge  \textbf{\thepage}} %Fußnote, left even, right odd auf alternierenden Seiten Seitenzahl wechseln
+        \fancyfootoffset[RO, LE]{50pt}
+        \renewcommand{\headrulewidth}{0pt} % Ausschalten der Headerlinie
+        \renewcommand{\footrulewidth}{0pt}
+}
+\pagestyle{plain}
 %----- Farben
 \usepackage{anyfontsize} %Größere/Kleinere Zeichen, https://www.ctan.org/pkg/anyfontsize
 \usepackage[table]{xcolor} %Farben definierne können, table für rowcolor, https://www.ctan.org/pkg/xcolor
@@ -72,36 +74,122 @@
         opacity=1,
         angle=0,
         contents={%Um gerade, ungerade zahl zu wechseln
-                 \ifodd\value{page}
-                         \includegraphics[width=\paperwidth]{bilder/seite-links.png}
-                 \else
+                \ifodd\value{page}
                         \includegraphics[width=\paperwidth]{bilder/seite-rechts.png}
-                 \fi
-                    }
-               }
+                \else
+                        \includegraphics[width=\paperwidth]{bilder/seite-links.png}
+                \fi
+        }
+}
 %------------
-               \usepackage{lmodern}%Schrift, https://www.ctan.org/tex-archive/info/lmodern
+\usepackage{lmodern}%Schrift, https://www.ctan.org/tex-archive/info/lmodern
 
 %------ Margin für Chapter etc. oben verkleinern
-               \usepackage{etoolbox} % https://www.ctan.org/pkg/etoolbox
+\usepackage{etoolbox} % https://www.ctan.org/pkg/etoolbox
 \makeatletter
-\patchcmd{\@makechapterhead}{50\p@}{0pt}{}{}
-\patchcmd{\@makeschapterhead}{50\p@}{0pt}{}{}
+\patchcmd{\@makechapterhead}{50\p@}{1pt}{}{}
+\patchcmd{\@makeschapterhead}{50\p@}{1pt}{}{}
+%\makeatother
+%\patchcmd{\chapter}{\thispagestyle{plain}}{\thispagestyle{fancy}}{}{}
 \makeatother
-\patchcmd{\chapter}{\thispagestyle{plain}}{\thispagestyle{fancy}}{}{}
 %----- Defintion der Splittermond Box
 \newtcolorbox{spmbox}[2][]{
-            boxsep=8mm, 
-            width=0.5\textwidth, 
-            top=1mm, 
-            bottom=1mm, 
-            enhanced, 
-            frame hidden, 
-            interior style image=bilder/Kasten.png
+        boxsep=8mm, 
+        width=0.5\textwidth, 
+        top=1mm, 
+        bottom=1mm, 
+        enhanced, 
+        frame hidden, 
+        interior style image=bilder/Kasten.png
 }
 
+%--------------------------------Doppelseite Grapfik Fix------------
+\usepackage{adjustbox}
+\usepackage{afterpage}
+\usepackage{placeins}
 
+% For the \muemoir` class remove the following two packages.
+% This class already provide the functionality of both
+\usepackage{caption}
+\usepackage[strict]{changepage}
+%%%
+
+\setcounter{totalnumber}{1}
+\setcounter{topnumber}{1}
+\setcounter{bottomnumber}{1}
+\renewcommand{\topfraction}{.99}
+\renewcommand{\bottomfraction}{.99}
+\renewcommand{\textfraction}{.01}
+
+\makeatletter
+\newcommand*{\twopagepicture}[4]{%
+        \checkoddpage
+        \ifoddpage
+                \expandafter\@firstofone
+        \else
+                \expandafter\afterpage
+        \fi
+        {\afterpage{%
+                        \if #1t%
+                                \if #2p%
+                                        \thispagestyle{empty}%
+                                        \afterpage{\thispagestyle{empty}}%
+                                \fi
+                        \fi
+                        \begin{figure}[#1]
+                                \if #2p%
+                                        \if #1t%
+                                                \vspace*{-\dimexpr1in+\voffset+\topmargin+\headheight+\headsep\relax}%
+                                        \fi
+                                \fi
+                                \if #1b%
+                                        \caption{#4}%
+                                \fi
+                                \makebox[\textwidth][l]{%
+                                        \if #2p\relax
+                                                \let\mywidth\paperwidth
+                                                \hskip-\dimexpr1in+\hoffset+\evensidemargin\relax
+                                        \else
+                                                \let\mywidth\linewidth
+                                        \fi
+                                \adjustbox{trim=0 0 {.5\width} 0,clip}{\includegraphics[width=2\mywidth]{#3}}}%
+                                \if #1b\else
+                                        \caption{#4}%
+                                \fi
+                                \if #2p%
+                                        \if #1b%
+                                                \vspace*{-\dimexpr\paperheight-\textheight-1in-\voffset-\topmargin-\headheight-\headsep\relax}%
+                                        \fi
+                                \fi
+                        \end{figure}%
+                        \begin{figure}[#1]
+                                \if #2p%
+                                        \if #1t%
+                                                \vspace*{-\dimexpr1in+\voffset+\topmargin+\headheight+\headsep\relax}%
+                                        \fi
+                                \fi
+                                \makebox[\textwidth][l]{%
+                                        \if #2p%
+                                                \let\mywidth\paperwidth
+                                                \hskip-\dimexpr1in+\hoffset+\oddsidemargin\relax
+                                        \else
+                                                \let\mywidth\linewidth
+                                        \fi
+                                \adjustbox{trim={.5\width} 0 0 0,clip}{\includegraphics[width=2\mywidth]{#3}}}%
+                                \if #2p%
+                                        \if #1b%
+                                                \vspace*{-\dimexpr\paperheight-\textheight-1in-\voffset-\topmargin-\headheight-\headsep\relax}%
+                                        \fi
+                                \fi
+                        \end{figure}%
+        }}%
+}
+\makeatother
+%--------------------------------------------------------
+
+%------------------------------------------------
 \begin{document}
+\pagenumbering{gobble}%keine Nummerierung der Seite für die Titelseite und Impressum
 \sffamily %Sans Serif Schriftart
 \begin{titlepage}
     %Hintergrundbild für das Titelblatt
@@ -110,56 +198,56 @@
         \tikz[remember picture,overlay] \node[opacity=1,inner sep=0pt] at (current page.center){\includegraphics[width=\paperwidth,height=\paperheight]{bilder/titelbild-balken.png}};
 
         {
-            \begin{center}
-                    \color{white}
-                    \fontsize{50}{60}
-                    \selectfont
-                    \textbf{\MyTitle}
-            \end{center}
-       }%Titelseite Block ende
+                \begin{center}
+                        \color{white}
+                        \fontsize{50}{60}
+                        \selectfont
+                        \textbf{\MyTitle}
+                \end{center}
+        }%Titelseite Block ende
     %Splittermond Fan Logo
-       \begin{figure}[b]
-               \centering
-               \includegraphics[scale=0.8]{bilder/Splittermond-Logo_fan_v2.png}
-       \end{figure}
+        \begin{figure}[b]
+                \centering
+                \includegraphics[scale=0.8]{bilder/Splittermond-Logo_fan_v2.png}
+        \end{figure}
 \end{titlepage}
 \clearpage
 {%Impressum und toc Seite
 
         {%Titel
-            \begin{center}
-                    \color{spmblue}
-                    \fontsize{40}{50}
-                    \selectfont
-                    \textbf{\MyTitle}
-            \end{center}
-       }%Titel
+                \begin{center}
+                        \color{spmblue}
+                        \fontsize{40}{50}
+                        \selectfont
+                        \textbf{\MyTitle}
+                \end{center}
+        }%Titel
     %Splittermond Fan Logo
-       \begin{figure}[t]
-               \centering
-               \includegraphics[scale=0.8]{bilder/Splittermond-Logo_fan_v2.png}
-       \end{figure}
-       
-       \vfill
+        \begin{figure}[t]
+                \centering
+                \includegraphics[scale=0.8]{bilder/Splittermond-Logo_fan_v2.png}
+        \end{figure}
+
+        \vfill
         \section*{Impressum}%* Versionen  da keine Nummern gewollt werden
         \addcontentsline{toc}{chapter}{Impressum}%Um zu Inhaltsverzeichnis hinzuzufügen
         \begin{center}
-        Splittermond wird herausgegeben vom \textit{Uhrwerk}-Verlag.\\
-        Bei diesem Werk handelt es sich um inoffizielles Fanmaterial.        
+                Splittermond wird herausgegeben vom \textit{Uhrwerk}-Verlag.\\
+                Bei diesem Werk handelt es sich um inoffizielles Fanmaterial.        
         \end{center}
         \subsection*{Autor}
         \begin{center} 
-        \MyAuthor
+                \MyAuthor
         \end{center}
         \subsection*{Illustrationen}
         \begin{center}
-        Max Mustermann        
+                Max Mustermann        
         \end{center}
 
         \subsection*{Layout}
         \begin{center}
-               Erstellt von Benjamin Thomitzni mit \LaTeX~und compiliert mit \textit{pdflatex}.\\
-               Inspririert von der Fanwerk Layoutvorlage von Daniel Bruxmeier für Word. \\         
+                Erstellt von Benjamin Thomitzni mit \LaTeX~und compiliert mit \textit{pdflatex}.\\
+                Inspririert von der Fanwerk Layoutvorlage von Daniel Bruxmeier für Word. \\         
         \end{center}
         %\subsection*{Lizenz}%Alte Lizenz als noch Graphiken von Daniel Bruxmeier verwendet wurden.
         %\begin{center}
@@ -173,20 +261,21 @@
 %---------- Inhaltsverzeichnis % entfernen um einzufügen
 %        \tableofcontents
 %----------
+\newpage
+\pagenumbering{arabic}%Nummerierung startet hier
 \chapter*{\MyTitle}%Chapter*, Section* etc. bedeutet dass sie nicht zur Inhaltsangabe hinzugefügt werden. Deswegen die nächste Zeile
 \addcontentsline{toc}{chapter}{\MyTitle}
-
 \begin{multicols}{2}
         \subsubsection*{von \MyAuthor}
         Blindtext blabla
 %----------------------Box Code        
         \begin{spmbox}
                 {\begin{center}
-                    \color{spmblue}
-                    \Large
-                    \textbf{\MyTitle}
+                                \color{spmblue}
+                                \Large
+                                \textbf{\MyTitle}
                 \end{center}}
-             Zusammenfassung des Abenteuers. Text. Blablabla. \\
+                Zusammenfassung des Abenteuers. Text. Blablabla. \\
                 \textbf{Region:} Wo auch immer\\
                 \textbf{Schauplätze:} In einer Stadt\\
                 \textbf{Erfahrung:} Heldengrad X\\
@@ -194,11 +283,11 @@
         \end{spmbox}
 %---------------------Kleine Überschriften
         \subsection*{Hintergrund}
-            \Blindtext[1][1]
+        \Blindtext[1][1]
         \subsection*{Handlung}
-            \Blindtext[1][1]
+        \Blindtext[1][1]
         \subsection*{Auswahl der Abenteuerer}
-            Irgendwelche Idioten die sterben wollen.             
+        Irgendwelche Idioten die sterben wollen.             
 \end{multicols}
 %-------------------- Neuer Abschnitt
 \section*{Einstieg: Wer, Wie, Wo, Was, Wie, Hä?}
@@ -212,14 +301,14 @@
                 \item Ein Zweites Item auf der Liste
         \end{enumerate}
 
-\subsection*{Nummer Eins}
-\Blindtext[1][1]
-\subsubsection*{Unterüberschrift}
-\Blindtext[1][1]
+        \subsection*{Nummer Eins}
+        \Blindtext[1][1]
+        \subsubsection*{Unterüberschrift}
+        \Blindtext[1][1]
         {%---- Bild einfügen direkt im Text, da float umgebungen in multicol Probleme machen. 
-        \begin{center}
-        \includegraphics[width=0.5\textwidth]{bilder/foo.png}
-        \end{center}
+                \begin{center}
+                        \includegraphics[width=0.5\textwidth]{bilder/foo.png}
+                \end{center}
         }
 \end{multicols}
 %--------- Bild einfügen außerhalb des textes
@@ -232,42 +321,60 @@
 \begin{multicols}{2}
         \Blindtext[1][1]
 %---------------- Gegner Block bis unten
-       \vbox{%Gegner Block
+        \vbox{%Gegner Block
                 {
-                \vspace{5mm}
-                \Large
-                \textbf{Beispielgegner}
+                        \vspace{5mm}
+                        \Large
+                        \textbf{Beispielgegner}
                 }\\
                 \rule{0.5\textwidth}{0.2em}\\%Querstrich
                 \resizebox{0.5\textwidth}{!}{%Automatisches Skalieren der Tabelle
-                \begin{tabular}{c|c|c|c|c|c|c|c}
-                        \rowcolor{spmtabelle}
-                        \textbf{AUS} & \textbf{BEW} & \textbf{INT} & \textbf{KON} & \textbf{MYS} & \textbf{STÄ} & \textbf{VER} & \textbf{WIL} \\
-                        1            & 1            & 1            & 1            & 1            & 1            & 1            & 1            \\
-                        \rowcolor{spmtabelle}
-                        \textbf{GK}  & \textbf{GSW} & \textbf{LP}  & \textbf{FO}  & \textbf{VTD} & \textbf{SR}  & \textbf{KW}  & \textbf{GW}  \\
-                        1            & 1            & 1            & 1            & 1            & 1            & 1            & 1           
-        \end{tabular}}\\ 
-        \resizebox{0.5\textwidth}{!}{
-                \begin{tabular}{l|c|c|c|c|c}
-                        \rowcolor{spmtabelle}
-                        \textbf{Waffe} & \textbf{Wertf} & \textbf{Schaden} & \textbf{WGS} & \textbf{INI} & \textbf{Merkmale} \\
-                        Körper         &            9   & 1W6              & 6 Ticks      & 7-1W6        & \\ 
+                        \begin{tabular}{c|c|c|c|c|c|c|c}
+                                \rowcolor{spmtabelle}
+                                \textbf{AUS} & \textbf{BEW} & \textbf{INT} & \textbf{KON} & \textbf{MYS} & \textbf{STÄ} & \textbf{VER} & \textbf{WIL} \\
+                                1            & 1            & 1            & 1            & 1            & 1            & 1            & 1            \\
+                                \rowcolor{spmtabelle}
+                                \textbf{GK}  & \textbf{GSW} & \textbf{LP}  & \textbf{FO}  & \textbf{VTD} & \textbf{SR}  & \textbf{KW}  & \textbf{GW}  \\
+                                1            & 1            & 1            & 1            & 1            & 1            & 1            & 1           
+                \end{tabular}}\\ 
+                \resizebox{0.5\textwidth}{!}{
+                        \begin{tabular}{l|c|c|c|c|c}
+                                \rowcolor{spmtabelle}
+                                \textbf{Waffe} & \textbf{Wertf} & \textbf{Schaden} & \textbf{WGS} & \textbf{INI} & \textbf{Merkmale} \\
+                                Körper         &            9   & 1W6              & 6 Ticks      & 7-1W6        & \\ 
 
-        \end{tabular}
-        }%Resizebox
-        \vspace{2mm}\\%Abstand
-        \textbf{Typus:} Humanoid \\
-        \textbf{Monstergrad:} 0/0 \\
-        \textbf{Fertigkeiten:} Absolut Nix 1, Nix 2 \\
-        \textbf{Meisterschaften:} Bäcker (Handwerk) \\
-        \textbf{Merkmale:} Dämmersicht \\
-        \textbf{Beute:} Lollipop \\
-        \rule{0.5\textwidth}{0.2em}\\
-        \vspace{5mm}
+                        \end{tabular}
+                }%Resizebox
+                \vspace{2mm}\\%Abstand
+                \textbf{Typus:} Humanoid \\
+                \textbf{Monstergrad:} 0/0 \\
+                \textbf{Fertigkeiten:} Absolut Nix 1, Nix 2 \\
+                \textbf{Meisterschaften:} Bäcker (Handwerk) \\
+                \textbf{Merkmale:} Dämmersicht \\
+                \textbf{Beute:} Lollipop \\
+                \rule{0.5\textwidth}{0.2em}\\
+                \vspace{5mm}
         }
 %------------------ Gegner Block Ende
 \end{multicols}    
 
+%------------ Doppelseite Graphik Dirty Hack
+%\newpage
+%\begin{figure}
+%        \newlengtih{\imagewidth}
+%        \settowidth{\imagewidth}{\includegraphics{bilder/hintergrund.jpg}}
+%        \newlength{\imageheight}
+%        \settoheight{\imageheight}{\includegraphics{bilder/hintergrund.jpg}}
+       % \includegraphics[clip, viewport=0px 0px 0.5\imagewidth{} \imageheight{}, width=\paperwidth, height=\paperheight]{bilder/hintergrund.jpg}
+%\end{figure}
+%        \tikz[remember picture, overlay] \node[opacity=1,inner sep=0pt] at (current page.center){\includegraphics[clip, viewport=0px 0px 0.5\imagewidth{} \imageheight{}, width=\paperwidth, height=\paperheight]{bilder/hintergrund.jpg}};
+%\newpage 
+%        \tikz[remember picture, overlay] \node[opacity=1,inner sep=0pt] at (current page.center){\includegraphics[clip, viewport=0.5\imagewidth{} 0px \imagewidth{} \imageheight{}, width=\paperwidth, height=\paperheight]{bilder/hintergrund.jpg}};
+%\newpage
+
+%---------------- Hier weiter mit normalen seiten
+
+%Doppelseite Graphik von stackoverflow
+\twopagepicture{t}{p}{bilder/hintergrund.jpg}{Test}
 \end{document}
 
