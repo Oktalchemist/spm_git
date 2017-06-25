@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2016.12.14)  21 JUN 2017 13:48
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2016.12.14)  25 JUN 2017 18:28
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -679,19 +679,19 @@ LaTeX Info: Redefining \checkoddpage on input line 59.
 (./abenteuer.aux)
 \openout1 = `abenteuer.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 191.
-LaTeX Font Info:    ... okay on input line 191.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 191.
-LaTeX Font Info:    ... okay on input line 191.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 191.
-LaTeX Font Info:    ... okay on input line 191.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 191.
-LaTeX Font Info:    ... okay on input line 191.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 191.
-LaTeX Font Info:    ... okay on input line 191.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 191.
-LaTeX Font Info:    ... okay on input line 191.
-LaTeX Font Info:    Try loading font information for OT1+lmr on input line 191.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 198.
+LaTeX Font Info:    ... okay on input line 198.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 198.
+LaTeX Font Info:    ... okay on input line 198.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 198.
+LaTeX Font Info:    ... okay on input line 198.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 198.
+LaTeX Font Info:    ... okay on input line 198.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 198.
+LaTeX Font Info:    ... okay on input line 198.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 198.
+LaTeX Font Info:    ... okay on input line 198.
+LaTeX Font Info:    Try loading font information for OT1+lmr on input line 198.
 
  (/usr/share/texmf/tex/latex/lm/ot1lmr.fd
 File: ot1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
@@ -793,7 +793,7 @@ e
 ABD: EveryShipout initializing macros
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: End \AtBeginDocument code.
-LaTeX Font Info:    Try loading font information for OT1+lmss on input line 193
+LaTeX Font Info:    Try loading font information for OT1+lmss on input line 200
 .
  (/usr/share/texmf/tex/latex/lm/ot1lmss.fd
 File: ot1lmss.fd 2009/10/30 v1.6 Font defs for Latin Modern
@@ -801,14 +801,14 @@ File: ot1lmss.fd 2009/10/30 v1.6 Font defs for Latin Modern
 File: bilder/hintergrund.jpg Graphic file (type jpg)
 
 <use bilder/hintergrund.jpg>
-Package pdftex.def Info: bilder/hintergrund.jpg used on input line 196.
+Package pdftex.def Info: bilder/hintergrund.jpg used on input line 203.
 (pdftex.def)             Requested size: 1097.49289pt x 845.04684pt.
 
 <bilder/titelbild-balken.png, id=5, 235.30429pt x 332.61272pt>
 File: bilder/titelbild-balken.png Graphic file (type png)
 
 <use bilder/titelbild-balken.png>
-Package pdftex.def Info: bilder/titelbild-balken.png used on input line 198.
+Package pdftex.def Info: bilder/titelbild-balken.png used on input line 205.
 (pdftex.def)             Requested size: 597.64111pt x 845.17201pt.
 
 <bilder/Splittermond-Logo_fan_v2.png, id=7, 565.11125pt x 200.75pt>
@@ -816,14 +816,14 @@ File: bilder/Splittermond-Logo_fan_v2.png Graphic file (type png)
 
 <use bilder/Splittermond-Logo_fan_v2.png>
 Package pdftex.def Info: bilder/Splittermond-Logo_fan_v2.png used on input line
- 211.
+ 218.
 (pdftex.def)             Requested size: 452.08961pt x 160.6002pt.
 
 <bilder/seite-rechts.png, id=8, 235.30429pt x 332.61272pt>
 File: bilder/seite-rechts.png Graphic file (type png)
 
 <use bilder/seite-rechts.png>
-Package pdftex.def Info: bilder/seite-rechts.png used on input line 213.
+Package pdftex.def Info: bilder/seite-rechts.png used on input line 220.
 (pdftex.def)             Requested size: 597.50787pt x 844.79137pt.
  [1
 
@@ -835,35 +835,35 @@ File: bilder/Splittermond-Logo_fan_v2.png Graphic file (type png)
 
 <use bilder/Splittermond-Logo_fan_v2.png>
 Package pdftex.def Info: bilder/Splittermond-Logo_fan_v2.png used on input line
- 228.
+ 235.
 (pdftex.def)             Requested size: 452.08961pt x 160.6002pt.
 LaTeX Font Info:    Font shape `OT1/lmss/m/it' in size <12> not available
-(Font)              Font shape `OT1/lmss/m/sl' tried instead on input line 235.
+(Font)              Font shape `OT1/lmss/m/sl' tried instead on input line 242.
 
-LaTeX Font Info:    Try loading font information for OML+lmm on input line 249.
+LaTeX Font Info:    Try loading font information for OML+lmm on input line 256.
 
 
 (/usr/share/texmf/tex/latex/lm/omllmm.fd
 File: omllmm.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
-LaTeX Font Info:    Try loading font information for OMS+lmsy on input line 249
+LaTeX Font Info:    Try loading font information for OMS+lmsy on input line 256
 .
 
 (/usr/share/texmf/tex/latex/lm/omslmsy.fd
 File: omslmsy.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
-LaTeX Font Info:    Try loading font information for OMX+lmex on input line 249
+LaTeX Font Info:    Try loading font information for OMX+lmex on input line 256
 .
 
 (/usr/share/texmf/tex/latex/lm/omxlmex.fd
 File: omxlmex.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <12> on input line 249.
+(Font)              <12> on input line 256.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <8> on input line 249.
+(Font)              <8> on input line 256.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <6> on input line 249.
+(Font)              <6> on input line 256.
 
 (/usr/share/texlive/texmf-dist/tex/latex/ucs/data/uni-0.def
 File: uni-0.def 2013/05/13 UCS: Unicode data U+0000..U+00FF
@@ -872,54 +872,54 @@ File: uni-0.def 2013/05/13 UCS: Unicode data U+0000..U+00FF
 File: bilder/seite-links.png Graphic file (type png)
 
 <use bilder/seite-links.png>
-Package pdftex.def Info: bilder/seite-links.png used on input line 264.
+Package pdftex.def Info: bilder/seite-links.png used on input line 271.
 (pdftex.def)             Requested size: 597.50787pt x 844.79137pt.
  [2
 
  <./bilder/seite-links.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 278--283
+Underfull \hbox (badness 10000) in paragraph at lines 285--290
 
  []
 
 <bilder/Kasten.png, id=24, 244.2726pt x 347.6187pt>
 File: bilder/Kasten.png Graphic file (type png)
  <use bilder/Kasten.png>
-Package pdftex.def Info: bilder/Kasten.png used on input line 283.
+Package pdftex.def Info: bilder/Kasten.png used on input line 290.
 (pdftex.def)             Requested size: 231.89365pt x 146.55049pt.
 
-Overfull \hbox (5.0pt too wide) in paragraph at lines 283--283
+Overfull \hbox (5.0pt too wide) in paragraph at lines 290--290
 [][] 
  []
 
 File: bilder/seite-rechts.png Graphic file (type png)
 <use bilder/seite-rechts.png>
-Package pdftex.def Info: bilder/seite-rechts.png used on input line 297.
+Package pdftex.def Info: bilder/seite-rechts.png used on input line 304.
 (pdftex.def)             Requested size: 597.50787pt x 844.79137pt.
  [1
 
  <./bilder/Kasten.png>]
-LaTeX Font Info:    Try loading font information for OMS+lmss on input line 300
+LaTeX Font Info:    Try loading font information for OMS+lmss on input line 307
 .
-LaTeX Font Info:    No file OMSlmss.fd. on input line 300.
+LaTeX Font Info:    No file OMSlmss.fd. on input line 307.
 
 
 LaTeX Font Warning: Font shape `OMS/lmss/m/n' undefined
 (Font)              using `OMS/cmsy/m/n' instead
-(Font)              for symbol `textbullet' on input line 300.
+(Font)              for symbol `textbullet' on input line 307.
 
 <bilder/foo.png, id=30, 642.4pt x 481.8pt>
 File: bilder/foo.png Graphic file (type png)
  <use bilder/foo.png>
-Package pdftex.def Info: bilder/foo.png used on input line 310.
+Package pdftex.def Info: bilder/foo.png used on input line 317.
 (pdftex.def)             Requested size: 234.73524pt x 176.05035pt.
 
-Overfull \hbox (5.0pt too wide) in paragraph at lines 310--311
+Overfull \hbox (5.0pt too wide) in paragraph at lines 317--318
  [] 
  []
 
 File: bilder/foo.png Graphic file (type png)
 <use bilder/foo.png>
-Package pdftex.def Info: bilder/foo.png used on input line 317.
+Package pdftex.def Info: bilder/foo.png used on input line 324.
 (pdftex.def)             Requested size: 281.68515pt x 211.26483pt.
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
@@ -927,57 +927,57 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 File: bilder/seite-links.png Graphic file (type png)
 
 <use bilder/seite-links.png>
-Package pdftex.def Info: bilder/seite-links.png used on input line 320.
+Package pdftex.def Info: bilder/seite-links.png used on input line 327.
 (pdftex.def)             Requested size: 597.50787pt x 844.79137pt.
  [2 <./bilder/foo.png>]
-Overfull \hbox (5.0pt too wide) in paragraph at lines 328--357
+Overfull \hbox (5.0pt too wide) in paragraph at lines 335--364
 [] 
  []
 
 
-Overfull \hbox (5.00691pt too wide) in paragraph at lines 328--357
+Overfull \hbox (5.00691pt too wide) in paragraph at lines 335--364
 [] 
  []
 
 
-Overfull \hbox (5.00027pt too wide) in paragraph at lines 328--357
+Overfull \hbox (5.00027pt too wide) in paragraph at lines 335--364
 [] 
  []
 
 
-Overfull \hbox (5.0pt too wide) in paragraph at lines 328--357
+Overfull \hbox (5.0pt too wide) in paragraph at lines 335--364
 [] 
  []
 
 File: bilder/seite-rechts.png Graphic file (type png)
 <use bilder/seite-rechts.png>
-Package pdftex.def Info: bilder/seite-rechts.png used on input line 379.
+Package pdftex.def Info: bilder/seite-rechts.png used on input line 386.
 (pdftex.def)             Requested size: 597.50787pt x 844.79137pt.
  [3]
 File: bilder/hintergrund.jpg Graphic file (type jpg)
  <use bilder/hintergrund.jpg>
-Package pdftex.def Info: bilder/hintergrund.jpg used on input line 379.
+Package pdftex.def Info: bilder/hintergrund.jpg used on input line 386.
 (pdftex.def)             Requested size: 1195.01575pt x 920.27956pt.
 
 
-LaTeX Warning: Float too large for page by 201.13934pt on input line 379.
+LaTeX Warning: Float too large for page by 201.13934pt on input line 386.
 
 File: bilder/hintergrund.jpg Graphic file (type jpg)
 <use bilder/hintergrund.jpg>
-Package pdftex.def Info: bilder/hintergrund.jpg used on input line 379.
+Package pdftex.def Info: bilder/hintergrund.jpg used on input line 386.
 (pdftex.def)             Requested size: 1195.01575pt x 920.27956pt.
 
 
-LaTeX Warning: Float too large for page by 176.63936pt on input line 379.
+LaTeX Warning: Float too large for page by 176.63936pt on input line 386.
 
 File: bilder/seite-links.png Graphic file (type png)
 <use bilder/seite-links.png>
-Package pdftex.def Info: bilder/seite-links.png used on input line 379.
+Package pdftex.def Info: bilder/seite-links.png used on input line 386.
 (pdftex.def)             Requested size: 597.50787pt x 844.79137pt.
  [4]
 File: bilder/seite-rechts.png Graphic file (type png)
  <use bilder/seite-rechts.png>
-Package pdftex.def Info: bilder/seite-rechts.png used on input line 379.
+Package pdftex.def Info: bilder/seite-rechts.png used on input line 386.
 (pdftex.def)             Requested size: 597.50787pt x 844.79137pt.
  [5]
 (./abenteuer.aux)
@@ -1002,7 +1002,7 @@ Here is how much of TeX's memory you used:
 xmf/fonts/type1/public/lm/lmss12.pfb></usr/share/texmf/fonts/type1/public/lm/lm
 ss8.pfb></usr/share/texmf/fonts/type1/public/lm/lmssbx10.pfb></usr/share/texmf/
 fonts/type1/public/lm/lmsso12.pfb>
-Output written on abenteuer.pdf (7 pages, 2877136 bytes).
+Output written on abenteuer.pdf (7 pages, 2877132 bytes).
 PDF statistics:
  72 PDF objects out of 1000 (max. 8388607)
  44 compressed objects within 1 object stream

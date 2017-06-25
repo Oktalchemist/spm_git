@@ -9,7 +9,14 @@
 
 \documentclass[12pt, a4paper, twoside, openany]{book}
 
+%Code zum compilieren mit pdflatex ohne zusätzliche fonts
 \usepackage[utf8x]{inputenc} %https://www.ctan.org/pkg/inputenc
+
+%Code zum compilieren mit luatex mit zusätzlichen fonts (Z 13 auskommentieren, Z16, Z 20 einkommentieren)
+%\usepackage{fontspec}
+%------------------Fonts einstellen bei Verwendung obigen Codes (\beispiel ist der Name den man verwendet um die Schrift aufzurufen)
+%\newfontfamily\beispiel{Beispiel-Regular}[Path=./fonts/] 
+%------------------------------------
 \usepackage{german} %Deutsche Sprache, https://www.ctan.org/pkg/german
 \usepackage[]{graphicx} %Zusatzfunktionen für Graphiken, remove draft for release, https://www.ctan.org/pkg/graphicx
 \usepackage{blindtext} %für lorem ipsum blindtext, https://www.ctan.org/pkg/blindtext
